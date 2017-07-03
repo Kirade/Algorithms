@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "stack.cpp"
+#include "stack.hpp"
 
 using namespace std;
 
@@ -33,22 +33,21 @@ int main(int argc, const char * argv[]) {
         switch(option){
             case 1:
                 stack_routine();
-                continue;
+                break;
             case 2:
                 queue_routine();
-                continue;;
+                break;;
             case 3:
                 tree_routine();
-                continue;;
+                break;;
             case 4:
                 linked_list_routine();
-                continue;
+                break;
             case 5:
                 return 0;
             default :
-                continue;
+                break;
         }
-        break;
     }
 
     return 0;
@@ -65,6 +64,8 @@ void stack_routine(){
     
     MyStack<char> stack(capacity);
     
+    stack.somefunction();
+    
     while(1){
         cout<<"--------------------"<<endl;
         cout<<"원하는 작업을 선택하세요"<<endl;
@@ -77,20 +78,18 @@ void stack_routine(){
         switch(option){
             case 1:
                 stack.push();
-                continue;
+                break;
             case 2:
                 stack.pop();
-                continue;
+                break;
             case 3:
                 stack.print_stack();
-                continue;
-            case 4:
-                cout<<"break"<<endl;
                 break;
+            case 4:
+                return;
             default :
-                continue;
+                break;
         }
-        break;
     }
     return;
 }
