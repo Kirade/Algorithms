@@ -12,7 +12,8 @@
 using namespace std;
 
 template<class T>
-Stack<T>::Stack(int capacity){
+Stack<T>::Stack(int capacity_input){
+    capacity = capacity_input;
     stack = new T[capacity];
     number_of_data = 0;
 }

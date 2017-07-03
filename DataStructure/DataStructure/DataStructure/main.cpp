@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "stack.hpp"
+#include "queue.hpp"
 
 using namespace std;
 
@@ -62,9 +63,7 @@ void stack_routine(){
     cout<<"스택의 크기를 정하세요"<<endl;
     cin>>capacity;
     
-    MyStack<int> stack(capacity);
-    
-    stack.somefunction();
+    Stack<int> stack(capacity);
     
     while(1){
         cout<<"--------------------"<<endl;
@@ -96,7 +95,41 @@ void stack_routine(){
 
 
 void queue_routine(){
+    int option = 0;
+    int capacity = 0;
+    
+    cout<<"큐의 크기를 정하세요"<<endl;
+    cin>>capacity;
+    
+    Queue<int> queue(capacity);
+    
+    while(1){
+        cout<<"--------------------"<<endl;
+        cout<<"원하는 작업을 선택하세요"<<endl;
+        cout<<"1. PUT"<<endl;
+        cout<<"2. GET"<<endl;
+        cout<<"3. PRINT"<<endl;
+        cout<<"4. 종료"<<endl;
+        cin>>option;
+        
+        switch(option){
+            case 1:
+                queue.put();
+                break;
+            case 2:
+                queue.get();
+                break;
+            case 3:
+                queue.print_queue();
+                break;
+            case 4:
+                return;
+            default :
+                break;
+        }
+    }
     return;
+
 }
 void tree_routine(){
     return;

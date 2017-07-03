@@ -15,10 +15,16 @@ template <class T>
 class Queue{
 private:
     T *queue;
-    int front;
+    int capacity; // 큐의 크기
+    int front; 
     int rear;
 public:
+    Queue(int capacity);
+    ~Queue();
     
+    void put();
+    void get();
+    void print_queue();
 };
 
 #endif /* queue_hpp */
