@@ -20,7 +20,7 @@ private:
     int number_of_data; // 현재 스택의 데이터 개수
     
 public:
-    Stack(int capacity);
+    Stack(int input_capacity);
     ~Stack();
     
     void pop();

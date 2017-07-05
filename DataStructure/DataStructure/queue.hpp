@@ -19,8 +19,26 @@ private:
     int front; 
     int rear;
 public:
-    Queue(int capacity);
+    Queue(int input_capacity);
     ~Queue();
+    
+    void put();
+    void get();
+    void print_queue();
+};
+
+template <class T>
+class Circular_Queue{
+private:
+    T *circular_queue;
+    int numberOfData;
+    int capacity;
+    int front;
+    int rear;
+    void checkEmptyOrFull();
+public:
+    Circular_Queue(int input_capacity);
+    ~Circular_Queue();
     
     void put();
     void get();

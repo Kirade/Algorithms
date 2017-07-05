@@ -62,5 +62,83 @@ void Queue<T>::print_queue(){
     }
 }
 
+template <class T>
+Circular_Queue<T>::Circular_Queue(int input_capacity){
+    capacity = input_capacity;
+    circular_queue = new T[capacity];
+    front = 0;
+    rear = 0;
+    numberOfData = 0;
+}
+
+template <class T>
+Circular_Queue<T>::~Circular_Queue(){
+    delete [] circular_queue;
+}
+
+template <class T>
+void Circular_Queue<T>::put(){
+    T data;
+    cout<<"데이터를 입력하세요 : ";
+    cin>>data;
+    
+    front %= capacity;
+    
+    if(front != rear){
+        circular_queue[front++] = data;
+        numberOfData++;
+    }
+    else if(front == rear && numberOfData == 0){
+        circular_queue[front++] = data;
+        numberOfData++;
+    }
+    else{
+        checkEmptyOrFull();
+    }
+}
+
+template <class T>
+void Circular_Queue<T>::get(){
+    T data;
+    
+    rear %= capacity;
+    
+    if(front != rear){
+        data = circular_queue[rear++];
+        cout<<"get : "<<data<<endl;
+        numberOfData--;
+    }
+    else if(front == rear && numberOfData == capacity){
+        data = circular_queue[rear++];
+        cout<<"get : "<<data<<endl;
+        numberOfData--;
+    }
+    else{
+        checkEmptyOrFull();
+    }
+}
+
+template <class T>
+void Circular_Queue<T>::checkEmptyOrFull(){
+    if(numberOfData == capacity){
+        cout<<"Queue is Full"<<endl;
+        return;
+    }
+    else{
+        cout<<"Queue is Empty!"<<endl;
+        cout<<front<<" "<<rear<<" "<<numberOfData<<" "<<capacity<<endl;
+        return;
+    }
+}
+
+template <class T>
+void Circular_Queue<T>::print_queue(){
+    for(int i=0;i<capacity;i++){
+        cout<<i<<" : "<<circular_queue[i]<<endl;
+    }
+}
+
 template class Queue<int>;
 template class Queue<char>;
+template class Circular_Queue<int>;
+template class Circular_Queue<char>;

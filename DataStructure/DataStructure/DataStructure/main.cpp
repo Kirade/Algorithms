@@ -101,7 +101,8 @@ void queue_routine(){
     cout<<"큐의 크기를 정하세요"<<endl;
     cin>>capacity;
     
-    Queue<int> queue(capacity);
+    //Queue<int> queue(capacity);
+    Circular_Queue<int> queue(capacity);
     
     while(1){
         cout<<"--------------------"<<endl;
