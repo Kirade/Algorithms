@@ -10,6 +10,7 @@
 		696AEA771F08DBB9006C54C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 696AEA761F08DBB9006C54C3 /* main.cpp */; };
 		696AEA811F08DBEC006C54C3 /* stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 696AEA7E1F08DBEC006C54C3 /* stack.cpp */; };
 		696AEA851F093E7D006C54C3 /* queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 696AEA831F093E7D006C54C3 /* queue.cpp */; };
+		69C5C6A21F0D117B00241F7E /* linked_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69C5C6A01F0D117B00241F7E /* linked_list.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		696AEA7F1F08DBEC006C54C3 /* stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack.hpp; sourceTree = "<group>"; };
 		696AEA831F093E7D006C54C3 /* queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = queue.cpp; path = ../queue.cpp; sourceTree = "<group>"; };
 		696AEA841F093E7D006C54C3 /* queue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = queue.hpp; path = ../queue.hpp; sourceTree = "<group>"; };
+		69C5C6A01F0D117B00241F7E /* linked_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = linked_list.cpp; sourceTree = "<group>"; };
+		69C5C6A11F0D117B00241F7E /* linked_list.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = linked_list.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				696AEA7E1F08DBEC006C54C3 /* stack.cpp */,
 				696AEA7F1F08DBEC006C54C3 /* stack.hpp */,
 				696AEA761F08DBB9006C54C3 /* main.cpp */,
+				69C5C6A01F0D117B00241F7E /* linked_list.cpp */,
+				69C5C6A11F0D117B00241F7E /* linked_list.hpp */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			files = (
 				696AEA771F08DBB9006C54C3 /* main.cpp in Sources */,
 				696AEA811F08DBEC006C54C3 /* stack.cpp in Sources */,
+				69C5C6A21F0D117B00241F7E /* linked_list.cpp in Sources */,
 				696AEA851F093E7D006C54C3 /* queue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +270,7 @@
 				696AEA7C1F08DBB9006C54C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
