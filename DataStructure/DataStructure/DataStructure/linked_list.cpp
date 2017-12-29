@@ -72,7 +72,6 @@ void LinkedList<T>::add_list(){
 
     tempNode->setNext(newNode);
     numberOfList++;
-    
 }
 
 template <class T>
