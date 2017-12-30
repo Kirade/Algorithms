@@ -4,10 +4,10 @@ import java.util.*;
 public class ZumInternet {
 
 	private static final String regex = "(^[a-zA-Z0-9]+$)";
-	private static String input;
-	private static int M = -1;
-	private static String M_String = "";
-	private static int M_value = 0;
+	private String input;
+	private int M = -1;
+	private String M_String = "";
+	private int M_value = 0;
 
 	// Constructor
 	public ZumInternet(String input){
@@ -96,7 +96,7 @@ public class ZumInternet {
 
 
 
-	private static int hash(String str){
+	private int hash(String str){
 		int sum = 0;
 		for(char c : str.toCharArray())
 			sum += (int)c;
@@ -104,7 +104,7 @@ public class ZumInternet {
 		return sum;
 	}
 
-	private static boolean check(String str1, String str2){
+	private boolean check(String str1, String str2){
 		return str1.equals(str2);
 	}
 
