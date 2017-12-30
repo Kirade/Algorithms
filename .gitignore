@@ -37,3 +37,4 @@ xcuserdata/
 workspace.xml
 *.class
 Main.java
+.idea
