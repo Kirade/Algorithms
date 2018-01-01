@@ -5,11 +5,12 @@ public class LinkedListNode {
 	LinkedListNode next;
 
 	public LinkedListNode(){
-
+		this.head = null;
+		this.data = -1;
+		this.next = null;
 	}
 
 	public LinkedListNode(int data){
-
 		this.data = data;
 		this.next = null;
 	}
@@ -20,11 +21,16 @@ public class LinkedListNode {
 
 		if(head == null){
 			head = newNode;
+			this.data = data;
 		}else {
 			while (current.next != null) {
+				current.head = head;
 				current = current.next;
 			}
+			current.head = head;
 			current.next = newNode;
+			next = head.next;
+
 		}
 	}
 
